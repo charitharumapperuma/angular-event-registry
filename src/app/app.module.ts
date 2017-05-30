@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppleComponent } from './apple/apple.component';
 import { EventRegistryService } from './shared/event-registry.service';
+import { WindowComponent } from './window/window.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppleComponent
+    AppleComponent,
+    WindowComponent
   ],
   imports: [
     BrowserModule,

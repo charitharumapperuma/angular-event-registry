@@ -9,7 +9,7 @@ import { EventRegistryService } from '../shared/event-registry.service';
 export class AppleComponent implements OnInit {
 
   private actions: Map<string, any> = new Map([
-    ['q', () => { console.log('Q key pressed'); }],
+    ['q', this.handlerFunctionQ ],
     ['w', () => { console.log('W key pressed'); }],
     ['e', () => { console.log('E key pressed'); }]
   ]);
@@ -36,4 +36,7 @@ export class AppleComponent implements OnInit {
     this.eventRegistry.trigger('e');
   }
 
+  private handlerFunctionQ() {
+    console.log('Q key pressed from a handler function');
+  }
 }
