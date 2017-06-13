@@ -12,9 +12,9 @@ export class WindowComponent {
     private renderer: Renderer2,
     private eventRegistry: EventRegistryService
   ) {
-    renderer.listen('document', 'keyup', (event: KeyboardEvent ) => {
+    /*renderer.listen('document', 'keyup', (event: KeyboardEvent ) => {
       this.eventRegistry.trigger(event.key);
-    });
+    });*/
   }
 
 }

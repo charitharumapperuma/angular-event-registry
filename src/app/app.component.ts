@@ -6,6 +6,6 @@ import { WindowComponent } from './window/window.component';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent extends WindowComponent {
+export class AppComponent {
   title = 'app works!';
 }

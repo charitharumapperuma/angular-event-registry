@@ -8,19 +8,23 @@ import { EventRegistryService } from '../shared/event-registry.service';
 })
 export class AppleComponent implements OnInit {
 
-  private actions: Map<string, any> = new Map([
-    ['q', this.handlerFunctionQ ],
-    ['w', () => { console.log('W key pressed'); }],
-    ['e', () => { console.log('E key pressed'); }]
-  ]);
-
   constructor(
-    private eventRegistry: EventRegistryService
+    public eventRegistry: EventRegistryService
   ) { }
 
   ngOnInit() {
-    this.actions.forEach((f, key) => {
+    /*private actions: Map<string, any> = new Map([
+     ['q', this.handlerFunctionQ ],
+     ['w', () => { console.log('W key pressed'); }],
+     ['e', () => { console.log('E key pressed'); }]
+     ]);*/
+
+    /*this.actions.forEach((f, key) => {
       this.eventRegistry.registerEvent(key).subscribe(f);
+    });*/
+
+    this.eventRegistry.registerEvent('Q_KEY_PRESS', ['shift', 'q']).subscribe(() => {
+      this.handlerFunctionQ();
     });
   }
 

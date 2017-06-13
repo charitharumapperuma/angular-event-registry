@@ -2,6 +2,6 @@
   apple works!
 </p>
 
-<button (click)="clickQ()">Q</button>
-<button (click)="clickW()">W</button>
-<button (click)="clickE()">E</button>
+<button (click)="eventRegistry.trigger('Q_KEY_PRESS')">Q</button>
+<button (click)="eventRegistry.trigger('w')">W</button>
+<button (click)="eventRegistry.trigger('e')">E</button>
